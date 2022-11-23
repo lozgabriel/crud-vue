@@ -1,8 +1,8 @@
 <template>
     <div>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
+        <button type="button" class="btn btn-ld-default" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Modal
         </button>
 
         <!-- Modal -->
@@ -19,7 +19,7 @@
             </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-ld-default">Salvar</button>
             </div>
             </div>
         </div>

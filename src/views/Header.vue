@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
+    <div class="container">
       <router-link class="navbar-brand" to="/">LegalDocs</router-link>
       <button
         class="navbar-toggler"

@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid my-2">
+  <main class="container my-2">
     <h1 class="text-center my-2">Home</h1>
     <FormDocs />
   </main>
