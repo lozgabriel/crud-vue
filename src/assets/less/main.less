@@ -1,0 +1,69 @@
+@import "base/_reset.less";
+@import "base/_typography.less";
+@import "utils/_variables.less";
+@import "utils/_mixins.less";
+
+// ----------------------------------------------------------------------
+  // Global
+// ----------------------------------------------------------------------
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: @background-color;
+}
+
+// ----------------------------------------------------------------------
+  // Header
+// ----------------------------------------------------------------------
+
+.navbar {
+    background-color: @ld-bg-default;
+    a {
+        color: @ld-font-color-header;
+        &.nav-link {
+            &.active {
+                color: @ld-font-color-active;
+            }
+        }
+        &:hover {
+            color: @ld-font-color-hover;
+        }
+        &:focus {
+            color: @ld-font-color-active;
+        }
+    }
+        
+}
+
+// ----------------------------------------------------------------------
+  // Formulário Home
+// ----------------------------------------------------------------------
+
+.content-box {
+    padding: 1.5rem;
+    margin: 1rem -0.75rem 0;
+    border: solid #ccc;
+    border-width: 1px;
+    border-radius: .25rem;
+}
+
+// ----------------------------------------------------------------------
+  // Tabela Documentos
+// ----------------------------------------------------------------------
+
+.table, .form-select, .btn{
+    font-size: @table-font-size;
+}
+
+// ----------------------------------------------------------------------
+  // Footer
+// ----------------------------------------------------------------------
+
+footer {
+    background-color: @ld-bg-default;
+    .nav-link, p {
+        color: @ld-font-color-footer;
+    }
+}

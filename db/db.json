@@ -1,0 +1,103 @@
+{
+  "documentos": {
+    "nomes": [
+      {
+        "id": 1,
+        "tipo": "Italiano Branco"
+      },
+      {
+        "id": 2,
+        "tipo": "3 Queijos"
+      },
+      {
+        "id": 3,
+        "tipo": "Parmesão e Orégano"
+      },
+      {
+        "id": 4,
+        "tipo": "Integral"
+      }
+    ],
+    "docFormats": [
+      {
+        "id": 1,
+        "tipo": "Word"
+      },
+      {
+        "id": 2,
+        "tipo": "Powerpoint"
+      },
+      {
+        "id": 3,
+        "tipo": "Excel"
+      },
+      {
+        "id": 4,
+        "tipo": "PDF"
+      }
+    ],
+    "opcionaisData": [
+      {
+        "id": 1,
+        "tipo": "Ativo"
+      },
+      {
+        "id": 2,
+        "tipo": "Finalizado"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 3,
+      "tipo": "Finalizado"
+    }
+  ],
+  "docs": [
+    {
+      "nome": "Gabriel Lozano",
+      "docFormat": "Word",
+      "opcionais": [
+        "Ativo"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Planilha",
+      "docFormat": "PDF",
+      "opcionais": [
+        "Ativo"
+      ],
+      "status": "Em produção",
+      "id": 3
+    },
+    {
+      "nome": "teste 1",
+      "docFormat": "Powerpoint",
+      "opcionais": [
+        "Ativo",
+        "Finalizado"
+      ],
+      "status": "Finalizado",
+      "id": 4
+    },
+    {
+      "nome": "Dados gerais",
+      "docFormat": "Excel",
+      "opcionais": [
+        "Finalizado"
+      ],
+      "status": "Em produção",
+      "id": 5
+    }
+  ]
+}
