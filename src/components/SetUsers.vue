@@ -1,12 +1,16 @@
 <template>
   <section class="content-box bg-white mx-1">
     <Message :msg="msg" v-show="msg"/>
-    <p>Cadastro de documento:</p>
+    <p>Cadastro de usuário:</p>
     <form id="doc-form" @submit="setDocs">
       <div class="mb-3">
-        <label for="nome" class="form-label">Nome Documento</label>
-        <input type="text" class="form-control" id="nome" name="nome" v-model="nome" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <label for="first_name" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="first_name" name="first_name" v-model="first_name">
+      </div>
+
+      <div class="mb-3">
+        <label for="last_name" class="form-label">Sobrenome</label>
+        <input type="text" class="form-control" id="last_name" name="last_name" v-model="last_name">
       </div>
 
       <div class="mb-3">
@@ -16,10 +20,6 @@
             {{ docFormat.tipo }}
           </option>
         </select>
-      </div>
-
-      <div class="mb-3">
-        <Modal />
       </div>
 
       <div class="mb-1 form-check" v-for="opcional in opcionaisData" :key="opcional.id">
@@ -33,68 +33,36 @@
         <button type="submit" class="btn btn-ld-default">Enviar</button>
       </div>
 
-      <!-- <div>
-        {{ users.id }}
-      </div>
-
-      <div v-for="user in users" :key="user.id">
-        {{ user.id }} {{ user.first_name }}
-      </div>
-
-      <div>
-        {{ productList }}
-      </div>
-
-      <div>
-        {{ getResults }}
-      </div> -->
-
     </form>
   </section>
 </template>
 
 <script>
-// import { mapGetters, mapActions } from "vuex";
 import Message from '../components/Message.vue';
-import Modal from '../components/Modal.vue';
 
 export default {
-  name: "FormDocs-App",
+  name: "SetUsers-App",
   components: {
-    Message,
-    Modal
+    Message
   },
   data() {
     return {
-      nome: null,
-      docFormat: null,
+      nomes: null,
       docFormats: null,
+      first_name: null,
+      docFormat: null,
       opcionaisData: null,
       opcionais: [],
-      msg: null,
-
-      users: {},
-      first_name: ''
+      msg: null
     };
   },
-  // computed: { ...mapGetters(["productList"]) },
-
-  // created() {
-  //   this.fetchAllProducts();
-  // },
-
   methods: {
-    // ...mapActions(["fetchAllProducts"]),
-
-    // getResults() {
-    //   this.fetchAllProducts();
-    // },
-
     async getDocs() {
 
       const req = await fetch("http://localhost:3000/documentos");
       const data = await req.json();
 
+      this.nomes = data.nomes
       this.docFormats = data.docFormats
       this.opcionaisData = data.opcionaisData
     },
@@ -103,7 +71,7 @@ export default {
       e.preventDefault();
       
       const data = {
-        nome: this.nome,
+        first_name: this.first_name,
         docFormat: this.docFormat,
         opcionais: Array.from(this.opcionais),
         status: "Enviado"
@@ -120,19 +88,17 @@ export default {
       const res = await req.json();
 
       //Colocar mensagem de sistema
-      this.msg = `Documento ${res.nome} cadastrado com sucesso!`
+      this.msg = `Documento ${res.first_name} cadastrado com sucesso!`
       setTimeout(() => this.msg = "", 3000)
       //Limpar os campos
-      this.nome = "",
+      this.first_name = "",
       this.docFormat = "",
       this.opcionais = ""
     }
   },
-
   mounted() {
-    this.getDocs();
+    this.getDocs()
   }
-
 };
 </script>
 

@@ -1,23 +1,5 @@
 {
   "documentos": {
-    "nomes": [
-      {
-        "id": 1,
-        "tipo": "Italiano Branco"
-      },
-      {
-        "id": 2,
-        "tipo": "3 Queijos"
-      },
-      {
-        "id": 3,
-        "tipo": "Parmesão e Orégano"
-      },
-      {
-        "id": 4,
-        "tipo": "Integral"
-      }
-    ],
     "docFormats": [
       {
         "id": 1,
@@ -98,6 +80,26 @@
       ],
       "status": "Em produção",
       "id": 5
+    },
+    {
+      "nome": "teste",
+      "docFormat": "Excel",
+      "opcionais": [
+        "Ativo",
+        "Finalizado"
+      ],
+      "status": "Enviado",
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Gabriel Lozano"
+    },
+    {
+      "id": 2,
+      "first_name": "Planilha"
     }
   ]
 }

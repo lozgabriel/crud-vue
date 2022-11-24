@@ -21,6 +21,12 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/docs">Documentos</router-link>
           </li>
+          <!-- <li class="nav-item">
+            <router-link class="nav-link" to="/users">Usuários</router-link>
+          </li> -->
+          <!-- <li class="nav-item">
+            <router-link class="nav-link" to="/products">Produtos</router-link>
+          </li> -->
         </ul>
       </div>
     </div>
